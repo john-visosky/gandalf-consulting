@@ -1,0 +1,50 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { background: #15191a; color: #f1f1f1; font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 1.45; }
+a { color: inherit; }
+.site-header { background: #15191a; border-top: 1px solid #596064; }
+.header-inner { max-width: 1225px; min-height: 181px; margin: 0 auto; display: flex; align-items: center; gap: 36px; padding: 24px 0; }
+.brand img { display: block; width: 500px; max-width: 100%; height: auto; }
+.contact { display: flex; gap: 8px; align-items: center; font-size: 13px; font-weight: bold; white-space: nowrap; }
+.contact a { text-decoration: none; }
+.contact span { color: #9a7511; }
+.main-nav { background: #303435; }
+.nav-inner { max-width: 1225px; margin: 0 auto; display: flex; justify-content: center; height: 59px; }
+.nav-inner a { display: flex; align-items: center; padding: 0 27px; font-size: 20px; text-decoration: none; }
+.nav-inner a.active, .nav-inner a:hover { background: #94700d; }
+.slideshow, .page-banner { position: relative; width: 100%; height: 300px; overflow: hidden; background: #222; }
+.slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1s ease; background-position: center; background-size: cover; }
+.slide.active { opacity: 1; }
+.slide span { position: absolute; left: max(calc((100% - 1225px)/2 + 50px), 5%); top: 50px; padding: 7px 12px; background: rgba(0,0,0,.48); font-size: 30px; text-shadow: 0 1px 2px #000; }
+.page-banner { height: 217px; background-size: cover; background-position: center 57%; }
+.content { max-width: 1225px; margin: 0 auto; padding: 30px 0 42px; }
+.content h1 { color: #c7b5a7; font-size: 36px; font-weight: normal; margin: 0 0 20px; padding-bottom: 5px; border-bottom: 1px dotted #555; }
+.content h2 { color: #c7b5a7; font-size: 24px; font-weight: normal; margin: 30px 0 15px; }
+.content h3 { font-size: 18px; margin: 24px 0 7px; }
+.content p { margin: 0 0 24px; }
+.intro-with-image { display: grid; grid-template-columns: 250px 1fr; gap: 15px; align-items: start; }
+.intro-with-image img { width: 250px; height: 188px; object-fit: cover; }
+.service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 45px; }
+.section-image { width: 100%; max-height: 300px; object-fit: cover; margin: 8px 0 10px; }
+.staff-profile { display: grid; grid-template-columns: 300px 1fr; gap: 32px; align-items: start; }
+.staff-profile img { width: 300px; max-height: 400px; object-fit: cover; object-position: center top; }
+.staff-profile h2 { margin-top: 0; }
+.site-footer { border-top: 1px solid #343839; background: #111516; }
+.footer-inner { max-width: 1225px; margin: 0 auto; padding: 28px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; font-size: 14px; }
+.footer-inner a { text-decoration: none; }
+.copyright { max-width: 1225px; margin: 0 auto; padding: 12px 0 24px; color: #aaa; font-size: 12px; }
+@media (max-width: 1280px) {
+  .header-inner, .content, .footer-inner, .copyright { padding-left: 24px; padding-right: 24px; }
+}
+@media (max-width: 760px) {
+  .header-inner { min-height: 0; flex-direction: column; align-items: flex-start; gap: 15px; }
+  .brand img { width: 100%; }
+  .contact { white-space: normal; flex-wrap: wrap; }
+  .nav-inner { height: 52px; }
+  .nav-inner a { padding: 0 18px; font-size: 18px; }
+  .slideshow { height: 240px; }
+  .slide span { left: 20px; right: 20px; top: 25px; font-size: 24px; }
+  .page-banner { height: 170px; }
+  .intro-with-image, .service-grid, .staff-profile, .footer-inner { grid-template-columns: 1fr; }
+  .intro-with-image img, .staff-profile img { width: min(100%, 320px); height: auto; max-height: none; }
+}
