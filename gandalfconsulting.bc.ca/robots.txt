@@ -1,0 +1,6 @@
+# OPB Platform - Default robots.txt
+# Allows all search engine crawlers to access all content by default.
+# Users can upload a custom robots.txt file to override this policy.
+# Future: Per-page settings will allow dynamic control of crawling.
+
+User-agent: *
